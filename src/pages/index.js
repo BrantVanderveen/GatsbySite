@@ -3,25 +3,31 @@ import Link from "gatsby-link"
 import Counter from "./counter"
 import Wrapper from "./pagewrapper"
 
-export default ({data}) => (
-  <Wrapper>
-    <div>
-      <h1>
-        {data.site.siteMetadata.title}
-      </h1>
-      <p>
-        Test paragraph 1!
-      </p>
-      <p>
-        Test paragraph 2
-      </p>
-      <Link to="newPage"> Link to new page </Link>
-      <br/>
-      <Counter color="blue"/>
-      <br/>
-      <div style={{padding: '20px', width: '50%', minWidth: '500px'}}>
-        <table>
-          <tbody>
+export default({data}) => (<Wrapper>
+  <div>
+    <h1>
+      {data.site.siteMetadata.title}
+    </h1>
+    <p>
+      Test paragraph 1!
+    </p>
+    <p>
+      Test paragraph 2
+    </p>
+    <Link to="newPage">
+      Link to new page
+    </Link>
+    <br/>
+    <Counter color="blue"/>
+    <br/>
+    <div style={{
+        padding: '20px',
+        width: '50%',
+        minWidth: '500px',
+        color: "red"
+      }}>
+      <table>
+        <tbody>
           <tr>
             <th>path</th>
             <th>size</th>
@@ -29,8 +35,10 @@ export default ({data}) => (
             <th>birth time</th>
             <th>index</th>
           </tr>
-          {data.allFile.edges.map(({node}, i) =>
-            <tr>
+          {
+            data.allFile.edges.map(({
+              node
+            }, i) => <tr>
               <td>
                 {node.relativePath}
               </td>
@@ -46,16 +54,15 @@ export default ({data}) => (
               <td>
                 {i}
               </td>
-            </tr>
-          )}
+            </tr>)
+          }
         </tbody>
-        </table>
-      </div>
+      </table>
     </div>
-  </Wrapper>
-)
+  </div>
+</Wrapper>)
 
-export const query = graphql`
+export const query = graphql `
   query FirstQuery {
     site {
       siteMetadata {
