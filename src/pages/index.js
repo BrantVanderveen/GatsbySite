@@ -10,7 +10,7 @@ export default ({data}) => (
         {data.site.siteMetadata.title}
       </h1>
       <p>
-        Test paragraph 123
+        Test paragraph 1!
       </p>
       <p>
         Test paragraph 2
@@ -29,7 +29,7 @@ export default ({data}) => (
             <th>birth time</th>
             <th>index</th>
           </tr>
-          {data.allFile.edges.map(({node}, index) =>
+          {data.allFile.edges.map(({node}, i) =>
             <tr>
               <td>
                 {node.relativePath}
@@ -44,7 +44,7 @@ export default ({data}) => (
                 {node.birthTime}
               </td>
               <td>
-                {index}
+                {i}
               </td>
             </tr>
           )}
