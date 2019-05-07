@@ -1,0 +1,21 @@
+.skinThumb {
+  border: 1px solid grey;
+  overflow: hidden;
+  text-align: center;
+}
+.skinThumb img {
+  max-width: none;
+}
+.skinThumbTextDiv {
+  margin: auto;
+  margin-top: -78px;
+  background: #fff;
+  color: #2DB5F7;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: fit-content;
+  font-size: 14px;
+  padding: 7px 15px;
+  font-family: Raleway;
+}

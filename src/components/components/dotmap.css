@@ -1,0 +1,16 @@
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: rgb(74, 140, 247);
+  border: 2px solid rgb(39, 79, 145);
+  opacity: 0.4;
+  position: absolute;
+  top:0px;
+  left:0px;
+  transition: opacity 0.3s;
+  cursor: pointer;
+}
+.dot:hover {
+  opacity: 0.7;
+}
