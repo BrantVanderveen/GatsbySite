@@ -10,7 +10,7 @@ export default ({data}) => (
         {data.site.siteMetadata.title}
       </h1>
       <p>
-        Test paragraph 1
+        Test paragraph 123
       </p>
       <p>
         Test paragraph 2
